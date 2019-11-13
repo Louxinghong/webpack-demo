@@ -1,0 +1,32 @@
+@media screen and (min-width: 600px) {
+  .qr-content {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .qr-content {
+    width: 70%;
+  }
+}
+.qr-content {
+  position: absolute;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #646363;
+}
+.qr-content .title {
+  display: block;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  border-bottom: 1px solid rgba(110, 109, 109, 0.61);
+}
+.qr-content ul {
+  padding: 0;
+  margin: 0;
+}
+.qr-content ul li {
+  margin-bottom: 6px;
+}

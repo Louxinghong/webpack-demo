@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>数据表单</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div class="form-container">
+        <p class="title">
+          <icon class="el-icon-edit"></icon>
+          <span>Form for Hu</span>
+        </p>
+        <el-form ref="form" :model="form">
+          <el-form-item prop="brand">
+            <el-input
+              v-model="form.brand"
+              placeholder="请输入品牌名称"
+              prefix-icon="el-icon-goods"
+              clearable
+            ></el-input>
+          </el-form-item>
+          <el-form-item prop="itemNumber">
+            <el-input
+              v-model="form.itemNumber"
+              placeholder="请输入货号"
+              prefix-icon="el-icon-discount"
+              clearable
+            ></el-input>
+          </el-form-item>
+          <el-form-item prop="material">
+            <el-input
+              v-model="form.material"
+              placeholder="请输入材质成分"
+              prefix-icon="el-icon-files"
+              clearable
+            ></el-input>
+          </el-form-item>
+          <el-form-item prop="yearMonth">
+            <el-input
+              v-model="form.yearMonth"
+              placeholder="请输入上市年份季节"
+              prefix-icon="el-icon-crop"
+              clearable
+            ></el-input>
+          </el-form-item>
+          <el-form-item class="btn-content">
+            <el-button type="primary" :loading="loading" @click="onSubmit"
+              >确定</el-button
+            >
+            <el-button type="warning" :loading="loading" @click="onRest"
+              >清空</el-button
+            >
+          </el-form-item>
+        </el-form>
+        <el-dialog
+          title="二维码"
+          :visible="show"
+          append-to-body="true"
+          width="240px"
+          :before-close="onClose"
+        >
+          <img :src="qrUrl" alt="" />
+        </el-dialog>
+      </div>
+    </div>
+  </body>
+</html>

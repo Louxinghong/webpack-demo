@@ -1,0 +1,36 @@
+@media screen and (min-width: 600px) {
+  .form-container {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .form-container {
+    width: 80%;
+  }
+}
+
+.form-container {
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .title {
+    display: block;
+    font-size: 30px;
+    text-align: center;
+  }
+  .el-form-item {
+    &.btn-content {
+      .el-form-item__content {
+        display: flex;
+        justify-content: space-between;
+        .el-button {
+          width: 45% !important;
+        }
+      }
+    }
+  }
+}
