@@ -1,3 +1,6 @@
+import "../css/main.css";
+import "../css/form.css";
+
 new Vue({
   el: "#app",
   data: {
