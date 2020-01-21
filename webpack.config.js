@@ -110,7 +110,6 @@ module.exports = {
         collapseWhitespace: true //折叠空白区域 也就是压缩代码
       }
     }),
-
     // css打包插件
     new MiniCssExtractPlugin({
       filename: "css/[name].[hash:8].css",
